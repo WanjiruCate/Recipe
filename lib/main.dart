@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:onboarding_screens/src/views/onbording.dart';
+import 'package:onboarding_screens/src/views/dashboard.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: OnBoarding(),
+      home: Dashboard(),
     );
   }
 }
