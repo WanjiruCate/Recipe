@@ -17,35 +17,28 @@ class _OnBoardingState extends State<OnBoarding> {
         centerTitle: true,
       ),
       body: Container(
-          child: ListView.separated(
-              itemBuilder: (context, index) {
-                OnBoardingData newData = data[index];
-                return Card(
-                  child: Row(children: <Widget>[
-                    Flexible(
-                      flex: 1,
-                      child: CircleAvatar(
-                        child: Image.asset(newData.imagePath),
-                      ),
-                    ),
-                    Flexible(
-                      flex: 2,
-                      child: Row(
-                        children: <Widget>[
-                          Text(newData.title),
-                          Text(newData.description),
-                        ],
-                      ),
-                    ),
-                  ]),
-                );
-              },
-              separatorBuilder: (context, index) {
-                return Divider(
-                  height: 10,
-                );
-              },
-              itemCount: data.length)),
+        child: ListView.separated(
+          itemCount: data.length,
+          separatorBuilder: (context, index) {
+            return Divider(
+              height: 10,
+            );
+          },
+          itemBuilder: (context, index) {
+            OnBoardingData newData = data[index];
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                leading: CircleAvatar(
+                  backgroundImage: AssetImage('assets/pay.jpeg'),
+                ),
+                title: Text(newData.title),
+                subtitle: Text(newData.description),
+              ),
+            );
+          },
+        ),
+      ),
     );
   }
 }
