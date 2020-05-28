@@ -30,7 +30,7 @@ class _DashboardState extends State<Dashboard> {
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
                 leading: CircleAvatar(
-                  backgroundImage: AssetImage('assets/pay.jpeg'),
+                  backgroundImage: AssetImage('assets/images/pay.jpeg'),
                 ),
                 title: Text(newData.title),
                 subtitle: Text(newData.description),
