@@ -50,7 +50,7 @@ class _SplashPageState extends State<SplashPage> {
                       CircleAvatar(
                         backgroundColor: white,
                         radius: 50.0,
-                        backgroundImage: AssetImage('assets/images/recipe.png'),
+                        // backgroundImage: AssetImage('assets/images/recipe.png'),
                         child: Icon(
                           Icons.fastfood,
                           color: Colors.red,

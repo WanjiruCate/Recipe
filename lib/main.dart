@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:onboarding_screens/src/utils/colors.dart';
 import 'package:onboarding_screens/src/views/dashboard.dart';
 import 'package:onboarding_screens/src/views/splashpage.dart';
@@ -12,15 +13,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Skills',
-      theme: ThemeData(primaryColor: red, accentColor: Colors.white70
-          // textTheme: GoogleFonts.mcLarenTextTheme(
-          //   Theme.of(context).textTheme,
-          // ),
-          ),
+      theme: ThemeData(
+        primaryColor: red,
+        accentColor: Colors.white70,
+        textTheme: GoogleFonts.mcLarenTextTheme(
+          Theme.of(context).textTheme,
+        ),
+      ),
       home: SplashPage(),
       routes: <String, WidgetBuilder>{
         '/Dashboard': (BuildContext context) => new Dashboard(),
-        
       },
     );
   }
